@@ -35,7 +35,6 @@ body{
 #sidebar{
     width: 35%;
     height: 100%;
-    border-right: 1px solid red;
     display: flex;
     flex-direction: column;
 }
@@ -49,9 +48,11 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
+    background-color: #EAEAEA;
+    border-right: 1px solid #D6D6D6;
 }
 
-#user>div{
+#user > div{
     display: flex;
     align-items: center;
 }
@@ -70,6 +71,7 @@ body{
     font-size: 30px;
     padding: 0 12px;
     color: #B1B1B1;
+    cursor: pointer;
 }
 
 /* //user contenitore utente */
@@ -122,8 +124,22 @@ body{
 /* search */
 
 #search{
-    height: 60px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: #FAFAFA;
+    border-right: 1px solid #D6D6D6;
+}
+
+#search input{
+    width: 95%;
+    line-height: 55px;
+    border-radius: 10px;
+    outline: white;
+    border-color: white;
+    border-width: 0;
 }
 
 /* //search */
@@ -131,10 +147,11 @@ body{
 /* contacts */
 
 #contacts{
-    height: calc(100% - 260px);
+    height: calc(100% - 280px);
     width: 100%;
     overflow-y: scroll;
     background-color: white;
+    border-right: 1px solid #D6D6D6;
 }
 
 #contacts > .contact{
@@ -163,15 +180,109 @@ body{
 /* //contacts */
 /* //sidebar contenitore sinistra */
 
-/* message contenitore destra */
+/***************************** 
+**message contenitore destra** 
+******************************/
 
 #message{
     width: 65%;
     height: 100%;
 }
 
-/* message contenitore destra */
+/* userActive */
 
+#message > #userActive{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #EAEAEA;
+}
 
+#message > #userActive > div:first-of-type{
+    display: flex;
+}
 
+#message > #userActive > div:first-of-type > img{
+    height: 75px;
+    border-radius: 50%;
+}
+
+#message > #userActive > div:first-of-type > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+#message > #userActive > div:first-of-type > div >span:first-of-type{
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+#message>#userActive>div:first-of-type>div>span:last-of-type{
+    font-size: 20px;
+    padding-top: 5px;
+    color: #6B7376;
+}
+
+#message>#userActive>div:last-of-type>i{
+    font-size: 30px;
+    padding: 0 12px;
+    color: #B1B1B1;
+    cursor: pointer;
+}
+
+/* //userActive */
+
+/* messageUser */
+
+#messageUser{
+    height: calc(100% - 200px);
+    width: 100%;
+    overflow-y: scroll;
+}
+
+/* //messageUser */
+
+/* messageReply */
+
+#messageReply{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F3EEEA;
+}
+
+#messageReply > div:not(#messageReplyInput){
+    width: 100px;
+    text-align: center;
+}
+
+#messageReply i{
+    font-size: 30px;
+    color: #6B7376;
+    cursor: pointer;
+}
+
+#messageReply > #messageReplyInput{
+    width: calc(100% - 200px);
+}
+
+#messageReply>#messageReplyInput>input{
+    width: 100%;
+    line-height: 70px;
+    border-radius: 10px;
+    border-color: white;
+    outline: white;
+    font-size: 25px;
+    text-indent: 20px;
+    border-width: 0;
+}
+
+/* //messageReply */
+/* //message contenitore destra */
 /* //Div app contenitore principale */
