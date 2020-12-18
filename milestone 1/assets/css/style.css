@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    /*background-color: #DBDBD2;*/
+}
+
+#verde_acqua {
+    background-color: #009688;
+    height: 130px;
+    width: 100vw;
+}
+
+/* Div app contenitore principale */
+#app{
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 120px;
+    right: 120px;
+    width: calc(100% - 240px);
+    min-width: 1350px;
+    height: calc(100% - 60px);
+    min-height: 650px;
+    background-color: blue;
+    display: flex;
+}
+
+/* sidebar contenitore sinistra */
+
+#sidebar{
+    width: 35%;
+    height: 100%;
+    border-right: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+/* user contenitore utente */
+
+#user{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+#user>div{
+    display: flex;
+    align-items: center;
+}
+
+#user > div > img{
+    height: 75px;
+    border-radius: 50%;
+}
+
+#user > div > span{
+    font-size: 25px;
+    padding: 0 7px;
+}
+
+#user > div > i{
+    font-size: 30px;
+    padding: 0 12px;
+    color: #B1B1B1;
+}
+
+/* //user contenitore utente */
+
+/* notifications */
+
+#notifications{
+    height: 100px;
+    width: 100%;
+    background-color: #8EDAFC;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+#notifications > div:first-of-type{
+    width: 75px;
+    height: 75px;
+    background-color: #F2FBFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notifications > div:first-of-type > i{
+    font-size: 30px;
+    color: #8EDAFC;
+}
+
+#notifications > div:last-of-type{
+    padding-left: 15px;
+}
+
+#notifications > div:last-of-type > h4{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#notifications > div:last-of-type > p{
+    font-size: 18px;
+    color: #4F7485;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* //notifications */
+
+/* search */
+
+#search{
+    height: 60px;
+    width: 100%;
+}
+
+/* //search */
+
+/* contacts */
+
+#contacts{
+    height: calc(100% - 260px);
+    width: 100%;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+#contacts > .contact{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+
+#contacts > .contact:hover{
+    background-color: grey;
+}
+
+#contacts > .contact > img{
+    padding-top: 10px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#contacts > .contact > p{
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+/* //contacts */
+/* //sidebar contenitore sinistra */
+
+/* message contenitore destra */
+
+#message{
+    width: 65%;
+    height: 100%;
+}
+
+/* message contenitore destra */
+
+
+
+/* //Div app contenitore principale */
