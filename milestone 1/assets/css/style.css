@@ -5,8 +5,7 @@
 }
 
 body{
-    background-color: black;
-    /*background-color: #DBDBD2;*/
+    background-color: #DBDBD2;
 }
 
 #verde_acqua {
@@ -26,7 +25,6 @@ body{
     min-width: 1350px;
     height: calc(100% - 60px);
     min-height: 650px;
-    background-color: blue;
     display: flex;
 }
 
@@ -133,13 +131,33 @@ body{
     border-right: 1px solid #D6D6D6;
 }
 
-#search input{
+#search > div{
     width: 95%;
-    line-height: 55px;
+    height: 55px;
+    display: flex;
     border-radius: 10px;
+    background-color: white;
+}
+
+#search > div > div{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search > div > div > i{
+    color: #B6B9BB;
+    font-size: 22px;
+}
+
+#search > div > input{
+    width: 85%;
+    line-height: 55px;
     outline: white;
     border-color: white;
     border-width: 0;
+    font-size: 20px;
 }
 
 /* //search */
@@ -162,7 +180,7 @@ body{
 }
 
 #contacts > .contact:hover{
-    background-color: grey;
+    background-color: #d8d8d8;
 }
 
 #contacts > .contact > img{
@@ -243,6 +261,8 @@ body{
     height: calc(100% - 200px);
     width: 100%;
     overflow-y: scroll;
+    background-image: url("../img/mine.jpg");
+    background-size: auto;
 }
 
 /* //messageUser */

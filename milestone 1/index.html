@@ -18,8 +18,8 @@
                 <div id="user">
 
                     <div>
-                        <img src="assets/img/avatar_io.jpg" alt="">
-                        <span>Nome Utente</span>
+                        <img :src="user.avatar" alt="">
+                        <span>{{user.name}}</span>
                     </div>
 
                     <div>
@@ -44,7 +44,12 @@
                 </div>
 
                 <div id="search">
-                    <input type="text" placeholder="">
+                    <div>
+                        <div>
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
                 </div>
 
                 <div id="contacts">
