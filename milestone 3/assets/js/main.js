@@ -106,13 +106,28 @@ let app = new Vue({
         newMessage(index){
             
             function newDateNow(){
-                var day = new Date().getDate().toString();
-                var month = new Date().getMonth().toString();
-                var year = new Date().getFullYear().toString();
-                var hours = new Date().getHours().toString();
-                var minutes = new Date().getMinutes().toString();
-                var seconds = new Date().getSeconds().toString();
-                var dateNow = day + "/" + month + "/" + year + " " + hours + ":" + minutes + ":" + seconds;
+                let day = new Date().getDate().toString();
+                let month = new Date().getMonth().toString();
+                let year = new Date().getFullYear().toString();
+                let hours = new Date().getHours().toString();
+                let minutes = new Date().getMinutes().toString();
+                let seconds = new Date().getSeconds().toString();
+                if (day < 10) {
+                    day = ("0" + day);
+                }
+                if (month < 10) {
+                    month = ("0" + month);
+                }
+                if (hours < 10) {
+                    hours = ("0" + hours);
+                }
+                if (minutes < 10) {
+                    minutes = ("0" + minutes);
+                }
+                if (seconds < 10) {
+                    seconds = ("0" + seconds);
+                }
+                const dateNow = day + "/" + month + "/" + year + " " + hours + ":" + minutes + ":" + seconds;
 
                 return dateNow;
             }
