@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #DBDBD2;
+}
+
+#verde_acqua {
+    background-color: #009688;
+    height: 130px;
+    width: 100vw;
+}
+
+/* class utility */
+
+
+
+/* //class utility */
+
+/* Div app contenitore principale */
+#app{
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 120px;
+    right: 120px;
+    width: calc(100% - 240px);
+    min-width: 1350px;
+    height: calc(100% - 60px);
+    min-height: 650px;
+    display: flex;
+}
+
+/* sidebar contenitore sinistra */
+
+#sidebar{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* user contenitore utente */
+
+#user{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #EAEAEA;
+    border-right: 1px solid #D6D6D6;
+}
+
+#user > div{
+    display: flex;
+    align-items: center;
+}
+
+#user > div > img{
+    height: 75px;
+    border-radius: 50%;
+}
+
+#user > div > span{
+    font-size: 25px;
+    padding: 0 7px;
+}
+
+#user > div > i{
+    font-size: 30px;
+    padding: 0 12px;
+    color: #B1B1B1;
+    cursor: pointer;
+}
+
+/* //user contenitore utente */
+
+/* notifications */
+
+#notifications{
+    height: 100px;
+    width: 100%;
+    background-color: #8EDAFC;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+#notifications > div:first-of-type{
+    width: 75px;
+    height: 75px;
+    background-color: #F2FBFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notifications > div:first-of-type > i{
+    font-size: 30px;
+    color: #8EDAFC;
+}
+
+#notifications > div:last-of-type{
+    padding-left: 15px;
+}
+
+#notifications > div:last-of-type > h4{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#notifications > div:last-of-type > p{
+    font-size: 18px;
+    color: #4F7485;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* //notifications */
+
+/* search */
+
+#search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: #FAFAFA;
+    border-right: 1px solid #D6D6D6;
+}
+
+#search > div{
+    width: 95%;
+    height: 55px;
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#search > div > div{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search > div > div > i{
+    color: #B6B9BB;
+    font-size: 22px;
+}
+
+#search > div > input{
+    width: 85%;
+    line-height: 55px;
+    outline: white;
+    border-color: white;
+    border-width: 0;
+    font-size: 20px;
+}
+
+/* //search */
+
+/* contacts */
+
+#contacts{
+    height: calc(100% - 280px);
+    width: 100%;
+    overflow-y: scroll;
+    background-color: white;
+    border-right: 1px solid #D6D6D6;
+}
+
+#contacts > .contact{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    position: relative;
+}
+
+#contacts > .contact:hover{
+    background-color: #d8d8d8;
+}
+
+#contacts > .contact > img{
+    padding-top: 10px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#contacts > .contact > div > p:first-of-type{
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+#contacts>.contact>div>p:last-of-type {
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 20px;
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #B6B9C1;
+}
+
+#contacts>.contact>div>span{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 15px;
+    color: #B6B9C1;
+}
+
+/* //contacts */
+/* //sidebar contenitore sinistra */
+
+/***************************** 
+**message contenitore destra** 
+******************************/
+
+#message{
+    width: 65%;
+    height: 100%;
+}
+
+/* userActive */
+
+#message > #userActive{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #EAEAEA;
+}
+
+#message > #userActive > div:first-of-type{
+    display: flex;
+}
+
+#message > #userActive > div:first-of-type > img{
+    height: 75px;
+    border-radius: 50%;
+}
+
+#message > #userActive > div:first-of-type > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+#message > #userActive > div:first-of-type > div >span:first-of-type{
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+#message>#userActive>div:first-of-type>div>span:last-of-type{
+    font-size: 20px;
+    padding-top: 5px;
+    color: #6B7376;
+}
+
+#message>#userActive>div:last-of-type>i{
+    font-size: 30px;
+    padding: 0 12px;
+    color: #B1B1B1;
+    cursor: pointer;
+}
+
+/* //userActive */
+
+/* messageUser */
+
+#messageUser{
+    height: calc(100% - 200px);
+    width: 100%;
+    overflow-y: scroll;
+    background-image: url("../img/mine.jpg");
+    background-size: auto;
+}
+
+#messageUser > div{
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.sentDiv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.receivedDiv {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sent,
+.received {
+    padding: 20px 15px 5px 15px;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.sent{
+    background-color: #D5F9BA;
+}
+
+.received {
+    background-color: white;
+}
+
+.sent > i,
+.received > i{
+    position: absolute;
+    top: 0;
+    right: 2px;
+    padding: 10px;
+    color: #B6B9C1;
+    opacity: 0;
+    cursor: pointer;
+} 
+
+.sent:hover > i,
+.received:hover > i {
+    opacity: 1;
+}
+
+.deleteMessage{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 15px 22px;
+    background-color: white;
+    text-align: center;
+    font-size: 18px;
+    z-index: 3;
+    display: none;
+}
+
+.deleteMessageBlock{
+    display: block;
+}
+
+.deleteMessage > p:first-of-type{
+    margin-bottom: 10px;
+}
+
+.deleteMessage>p:hover{
+    color: #BDB9BB;
+    cursor: pointer;
+}
+
+.sent > div:first-of-type,
+.received > div:first-of-type {
+    font-size: 22px;
+    padding-bottom: 5px;
+    word-wrap: break-word;
+}
+
+.sent > div:last-of-type,
+.received > div:last-of-type{
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    color: #BDB9BB;
+}
+
+/* //messageUser */
+
+/* messageReply */
+
+#messageReply{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F3EEEA;
+}
+
+#messageReply > div:not(#messageReplyInput){
+    width: 100px;
+    text-align: center;
+}
+
+#messageReply i{
+    font-size: 30px;
+    color: #6B7376;
+    cursor: pointer;
+}
+
+#messageReply > #messageReplyInput{
+    width: calc(100% - 200px);
+}
+
+#messageReply>#messageReplyInput>input{
+    width: 100%;
+    line-height: 70px;
+    border-radius: 10px;
+    border-color: white;
+    outline: white;
+    font-size: 25px;
+    text-indent: 20px;
+    border-width: 0;
+}
+
+/* //messageReply */
+/* //message contenitore destra */
+/* //Div app contenitore principale */
