@@ -196,10 +196,6 @@ body{
     border-radius: 50%;
 }
 
-#contacts>.contact>div{
-    
-}
-
 #contacts > .contact > div > p:first-of-type{
     padding-top: 10px;
     padding-left: 15px;
