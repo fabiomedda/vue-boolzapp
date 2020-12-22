@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue Boolzapp</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+
+        <div id="verde_acqua"></div>
+
+        <div id="app">
+
+            <section id="sidebar">
+
+                <div id="user">
+
+                    <div>
+                        <img :src="user.avatar" alt="">
+                        <span>{{user.name}}</span>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+
+                </div>
+
+                <div id="notifications">
+
+                    <div>
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+
+                    <div>
+                        <h4>Ricevi notifiche di nuovi messaggi</h4>
+                        <p>Attiva notifiche desktop</p>
+                    </div>
+
+                </div>
+
+                <div id="search">
+                    <div>
+                        <div>
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input @keyup="filterUsers" v-model="filterContacts" type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                </div>
+
+                <div id="contacts">
+
+                    <div v-if="contacts[index].visibleFilter" class="contact" v-for="(contact,index) in contacts" @click="active(index)">
+                        <img :src="contact.avatar" alt="">
+                        <div>
+                            
+                            <p>{{contact.name}}</p>
+                            <p>{{contact.lastMessage}}</p>
+                            <span>{{contact.lastAccess}}</span>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="message">
+
+                <div id="userActive">
+
+                    <div v-if="contacts[index].visible" v-for="(contact,index) in contacts">
+                        <img :src="contacts[index].avatar" alt="">
+                        <div>
+                            <span>{{contacts[index].name}}</span>
+                            <span>Ultimo accesso oggi alle {{contacts[index].lastAccess}}</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+
+                </div>
+
+                <div id="messageUser">
+
+                    <div v-if="contacts[index].visible" v-for="(contact,index) in contacts">
+                        <div :class="(message.status === 'sent') ? 'sentDiv' : 'receivedDiv' " v-for="message in contact.messages">
+                            <div :class="(message.status === 'sent') ? 'sent' : 'received' ">
+                                <div>
+                                    <span>{{message.text}}</span>
+                                </div>
+                                <div>
+                                    <span>{{message.date}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="messageReply">
+
+                    <div>
+                        <i class="far fa-smile"></i>
+                    </div>
+
+                    <div id="messageReplyInput">
+                        <input v-model="messageSend" @keyup.13="newMessage(index)" type="text" placeholder="Scrivi un messaggio" v-if="contacts[index].visible" v-for="(contact,index) in contacts">
+                    </div>
+
+                    <div>
+                        <i class="fas fa-microphone"></i>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
